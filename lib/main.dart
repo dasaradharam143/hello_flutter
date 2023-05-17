@@ -24,26 +24,40 @@ class MyWidget extends StatelessWidget {
                 IconButton(
                   icon: const Icon(
                     Icons.search,
+                    color: Colors.black54,
                   ),
                   onPressed: () {},
                 ),
                 IconButton(
                   icon: const Icon(
                     Icons.flutter_dash_rounded,
+                    color: Colors.black54,
                   ),
                   onPressed: () {},
                 ),
                 IconButton(
                   icon: const Icon(
                     Icons.facebook,
+                    color: Colors.black54,
                   ),
                   onPressed: () {},
                 ),
                 IconButton(
                   icon: const Icon(
                     Icons.snapchat,
+                    color: Colors.black54,
                   ),
                   onPressed: () {},
+                ),
+
+                PopupMenuButton(itemBuilder: (BuildContext context){
+                  return[
+                    const PopupMenuItem(child: Text('Rate Us')),
+                    const PopupMenuItem(child: Text('Contact Us')),
+                    const PopupMenuItem(child: Text('about us')),
+                    const PopupMenuItem(child: Text('Logout'))
+                  ];
+                }
                 )
               ],
             )
@@ -52,7 +66,7 @@ class MyWidget extends StatelessWidget {
         body: SafeArea(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            // crossAxisAlignment: CrossAxisAlignment.stretch,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Container(
                 color: Colors.tealAccent,
@@ -61,6 +75,7 @@ class MyWidget extends StatelessWidget {
                 height: 500,
                 padding:
                     const EdgeInsets.symmetric(vertical: 10, horizontal: 50),
+                // margin: EdgeInsets.symmetric(vertical: 60),
                 child: const Image(
                     image: NetworkImage(
                         'https://images.pexels.com/photos/16678541/pexels-photo-16678541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')),
@@ -96,10 +111,3 @@ class MyWidget extends StatelessWidget {
   }
 }
 
-// IconButton(
-// icon: const Icon(
-// Icons.facebook,
-// color: Colors.blue,
-// ),
-// onPressed: () {},
-// )
