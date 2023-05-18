@@ -49,16 +49,14 @@ class MyWidget extends StatelessWidget {
                   ),
                   onPressed: () {},
                 ),
-
-                PopupMenuButton(itemBuilder: (BuildContext context){
-                  return[
+                PopupMenuButton(itemBuilder: (BuildContext context) {
+                  return [
                     const PopupMenuItem(child: Text('Rate Us')),
                     const PopupMenuItem(child: Text('Contact Us')),
                     const PopupMenuItem(child: Text('about us')),
                     const PopupMenuItem(child: Text('Logout'))
                   ];
-                }
-                )
+                })
               ],
             )
           ],
@@ -110,4 +108,3 @@ class MyWidget extends StatelessWidget {
     );
   }
 }
-
