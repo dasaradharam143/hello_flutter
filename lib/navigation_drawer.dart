@@ -83,7 +83,7 @@ class Homepage extends StatelessWidget {
                       'https://images.pexels.com/photos/16678541/pexels-photo-16678541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')),
             ),
             Container(
-              color: Colors.teal,
+              color: Colors.tealAccent,
               alignment: Alignment.center,
               width: 250,
               height: 500,
@@ -157,7 +157,7 @@ class Homepage extends StatelessWidget {
         child: const Icon(Icons.send),
       ),
       bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Colors.cyan,
+        backgroundColor: Colors.tealAccent,
         color: Colors.amber,
         animationDuration: const Duration(milliseconds: 300),
         items: const [
@@ -166,6 +166,7 @@ class Homepage extends StatelessWidget {
           Icon(Icons.settings, color: Colors.white),
         ],
       ),
+      backgroundColor: Colors.tealAccent,
     );
   }
 }
