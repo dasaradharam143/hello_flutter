@@ -1,3 +1,4 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,6 +20,50 @@ class Homepage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Nav Bar'),
+        actions: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text("search"),
+              IconButton(
+                icon: const Icon(
+                  Icons.search,
+                  color: Colors.black54,
+                ),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: const Icon(
+                  Icons.flutter_dash_rounded,
+                  color: Colors.black54,
+                ),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: const Icon(
+                  Icons.facebook,
+                  color: Colors.black54,
+                ),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: const Icon(
+                  Icons.snapchat,
+                  color: Colors.black54,
+                ),
+                onPressed: () {},
+              ),
+              PopupMenuButton(itemBuilder: (BuildContext context) {
+                return [
+                  const PopupMenuItem(child: Text('Rate Us')),
+                  const PopupMenuItem(child: Text('Contact Us')),
+                  const PopupMenuItem(child: Text('about us')),
+                  const PopupMenuItem(child: Text('Logout'))
+                ];
+              })
+            ],
+          )
+        ],
       ),
       // body: Container(),
       body: SafeArea(
@@ -84,18 +129,24 @@ class Homepage extends StatelessWidget {
               title: Text("person"),
               subtitle: Text("name"),
               trailing: Icon(Icons.edit),
+              titleTextStyle: TextStyle(color: Colors.cyan),
+              subtitleTextStyle: TextStyle(color: Colors.cyan),
             ),
             ListTile(
               leading: Icon(Icons.email),
               title: Text("email"),
               subtitle: Text("name@gmail.com"),
               trailing: Icon(Icons.send),
+              titleTextStyle: TextStyle(color: Colors.cyan),
+              subtitleTextStyle: TextStyle(color: Colors.cyan),
             ),
             ListTile(
               leading: Icon(Icons.help),
               title: Text("about"),
               subtitle: Text("Contact Us"),
               trailing: Icon(Icons.call),
+              titleTextStyle: TextStyle(color: Colors.cyan),
+              subtitleTextStyle: TextStyle(color: Colors.cyan),
             ),
           ],
         ),
@@ -104,6 +155,16 @@ class Homepage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: const Icon(Icons.send),
+      ),
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: Colors.cyan,
+        color: Colors.amber,
+        animationDuration: const Duration(milliseconds: 300),
+        items: const [
+          Icon(Icons.home, color: Colors.white),
+          Icon(Icons.favorite, color: Colors.white),
+          Icon(Icons.settings, color: Colors.white),
+        ],
       ),
     );
   }
