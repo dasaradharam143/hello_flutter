@@ -127,26 +127,32 @@ class Homepage extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.person),
               title: Text("person"),
-              subtitle: Text("name"),
+              subtitle: Text(
+                "name",
+                style: TextStyle(color: Colors.orangeAccent),
+              ),
               trailing: Icon(Icons.edit),
               titleTextStyle: TextStyle(color: Colors.cyan),
-              subtitleTextStyle: TextStyle(color: Colors.cyan),
             ),
             ListTile(
               leading: Icon(Icons.email),
               title: Text("email"),
-              subtitle: Text("name@gmail.com"),
+              subtitle: Text(
+                "name@gmail.com",
+                style: TextStyle(color: Colors.orangeAccent),
+              ),
               trailing: Icon(Icons.send),
               titleTextStyle: TextStyle(color: Colors.cyan),
-              subtitleTextStyle: TextStyle(color: Colors.cyan),
             ),
             ListTile(
               leading: Icon(Icons.help),
               title: Text("about"),
-              subtitle: Text("Contact Us"),
+              subtitle: Text(
+                "Contact Us",
+                style: TextStyle(color: Colors.orangeAccent),
+              ),
               trailing: Icon(Icons.call),
               titleTextStyle: TextStyle(color: Colors.cyan),
-              subtitleTextStyle: TextStyle(color: Colors.cyan),
             ),
           ],
         ),
