@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:hello_flutter/main.dart';
 
 void main() {
   runApp(
@@ -159,7 +160,10 @@ class Homepage extends StatelessWidget {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const MyWidget()));
+        },
         child: const Icon(Icons.send),
       ),
       bottomNavigationBar: CurvedNavigationBar(
@@ -167,9 +171,9 @@ class Homepage extends StatelessWidget {
         color: Colors.amber,
         animationDuration: const Duration(milliseconds: 300),
         items: const [
-          Icon(Icons.home, color: Colors.white),
-          Icon(Icons.favorite, color: Colors.white),
-          Icon(Icons.settings, color: Colors.white),
+          Icon(Icons.home, color: Colors.tealAccent),
+          Icon(Icons.favorite, color: Colors.tealAccent),
+          Icon(Icons.settings, color: Colors.tealAccent),
         ],
       ),
       backgroundColor: Colors.tealAccent,
