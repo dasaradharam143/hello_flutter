@@ -67,45 +67,73 @@ class Homepage extends StatelessWidget {
         ],
       ),
       // body: Container(),
-      body: SafeArea(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Container(
-              color: Colors.tealAccent,
-              alignment: Alignment.center,
-              width: 250,
-              height: 500,
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 50),
-              // margin: EdgeInsets.symmetric(vertical: 60),
-              child: const Image(
-                  image: NetworkImage(
-                      'https://images.pexels.com/photos/16678541/pexels-photo-16678541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')),
-            ),
-            Container(
-              color: Colors.tealAccent,
-              alignment: Alignment.center,
-              width: 250,
-              height: 500,
-              padding: const EdgeInsets.all(30),
-              child: const Image(
+      // body: SafeArea(
+      //   child: Row(
+      //     mainAxisAlignment: MainAxisAlignment.center,
+      //     crossAxisAlignment: CrossAxisAlignment.stretch,
+      //     children: [
+      //       Container(
+      //         color: Colors.tealAccent,
+      //         alignment: Alignment.center,
+      //         width: 250,
+      //         height: 500,
+      //         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 50),
+      //         // margin: EdgeInsets.symmetric(vertical: 60),
+      //         child: const Image(
+      //             image: NetworkImage(
+      //                 'https://images.pexels.com/photos/16678541/pexels-photo-16678541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')),
+      //       ),
+      //       Container(
+      //         color: Colors.tealAccent,
+      //         alignment: Alignment.center,
+      //         width: 250,
+      //         height: 500,
+      //         padding: const EdgeInsets.all(30),
+      //         child: const Image(
+      //           image: NetworkImage(
+      //               'https://images.pexels.com/photos/16678541/pexels-photo-16678541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+      //         ),
+      //       ),
+      //       Container(
+      //         color: Colors.tealAccent,
+      //         alignment: Alignment.center,
+      //         width: 250,
+      //         height: 500,
+      //         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 50),
+      //         child: const Image(
+      //           image: NetworkImage(
+      //               'https://images.pexels.com/photos/16678541/pexels-photo-16678541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+      //         ),
+      //       ),
+      //     ],
+      //   ),
+      // ),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topRight,
+            end: Alignment.bottomRight,
+            colors: [
+              Colors.white,
+              Colors.tealAccent,
+            ],
+          ),
+        ),
+        child: const Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Image(
                 image: NetworkImage(
                     'https://images.pexels.com/photos/16678541/pexels-photo-16678541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
-              ),
-            ),
-            Container(
-              color: Colors.tealAccent,
-              alignment: Alignment.center,
-              width: 250,
-              height: 500,
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 50),
-              child: const Image(
-                image: NetworkImage(
-                    'https://images.pexels.com/photos/16678541/pexels-photo-16678541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
-              ),
-            ),
-          ],
+                height: 200,
+                width: 200,
+              )
+            ],
+          ),
         ),
       ),
       drawer: Drawer(
@@ -172,9 +200,13 @@ class Homepage extends StatelessWidget {
         animationDuration: const Duration(milliseconds: 300),
         items: const [
           Icon(Icons.home, color: Colors.tealAccent),
-          Icon(Icons.favorite, color: Colors.tealAccent),
+          Icon(Icons.account_circle, color: Colors.tealAccent),
+          Icon(Icons.person_rounded, color: Colors.tealAccent),
           Icon(Icons.settings, color: Colors.tealAccent),
+          Icon(Icons.favorite, color: Colors.tealAccent),
+          Icon(Icons.help, color: Colors.tealAccent),
         ],
+        
       ),
       backgroundColor: Colors.tealAccent,
     );
