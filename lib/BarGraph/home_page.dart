@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_flutter/bar_graph.dart';
+import 'package:hello_flutter/BarGraph/bar_graph.dart';
 
 /*
 
